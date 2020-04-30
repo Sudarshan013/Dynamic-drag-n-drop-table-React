@@ -1,38 +1,93 @@
 .App {
-  text-align: center;
+  position: relative;
+  /* background: #2c3e50;  fallback for old browsers */
+  /* background: -webkit-linear-gradient(to right, #3498db, #2c3e50);  */
+  /* Chrome 10-25, Safari 5.1-6 */
+  /* background: linear-gradient(to right, #3498db, #2c3e50); */
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+ul {
+  padding-left: 0px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.edit-btn{
+    display: flex;
+    justify-content: center;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.selected-header {
+  position: relative;
+  display: block;
+  margin-bottom: 8px;
+  height: auto;
+  width: 100%;
+  line-height: 22px;
+  text-align: left;
+  vertical-align: middle;
+  color: rgb(51, 71, 91);
+  padding-bottom: 9px;
+  padding-left: 26px;
+  padding-right: 30px;
+  padding-top: 9px;
+  font-size: 14px;
+  background-color: rgb(234, 240, 246);
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(203, 214, 226);
+  border-image: initial;
+  border-radius: 3px;
+}
+.flex-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.bp3-card {
+  width: 600px;
+  height: 422px;
+  left: 50%;
+  top: 50%;
+  margin-left: -300px;
+  margin-top: -150px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.bp3-control {
+  font-size: 19px;
+}
+.selected-header{
+ cursor: move;
+}
+.edit-column-container {
+  margin: 3px;
+  display: flex;
+}
+.available-columns,
+.selected-columns {
+  height: 316px;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+.available-columns {
+  width: 280px;
+}
+.selected-columns {
+  width: 280px;
+}
+.sortableHelper {
+  opacity: 1 !important;
+  z-index: 9999;
+}
+table {
+  border: 1px solid #ddd;
+}
+td,
+th {
+  font-size: 18px;
+  border-left: 1px solid #ddd !important;
+}
+.overlay{
+    position: relative;
+}
+.overlay-control-btn{
+    position: absolute;
+    bottom: 10px;
+    right: 25px;
+}
+.overlay-control-btn button{
+    margin-right: 10px;
 }
